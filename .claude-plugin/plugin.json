@@ -1,0 +1,10 @@
+{
+  "name": "quarry",
+  "version": "1.0.0",
+  "description": "Project management workflow for Claude Code — capture, refine, prioritize, and execute tasks with a structured inbox-to-done pipeline",
+  "author": {
+    "name": "jehoshua02"
+  },
+  "repository": "https://github.com/jehoshua02/claude-plugin-quarry",
+  "license": "MIT"
+}
