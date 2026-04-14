@@ -1,30 +1,23 @@
-# claude-plugin-quarry
+# quarry
 
-Quarry is a Claude Code plugin that injects a structured task management workflow into Claude's context. Capture, break, refine, prioritize, and execute — from raw ideas to shipped work.
+All work is just different sized rocks. Break them. Move them.
 
-The name comes from the analogy: a quarry extracts raw material. You capture rough ideas, break them into rocks, refine them, and ship them.
-
-## What it does
-
-Injects `quarry.md` into `~/.claude/rules/` via a `SessionStart` hook. Claude picks up the workflow rules automatically on session start.
-
-## What it includes
-
-- Prioritization formula (Value, Momentum, Effort, Risk)
-- Four-stage pipeline: inbox → todo → doing → done
-- Workflow steps: capture, refine, pick up, complete
-- Task file template
-
-## What it doesn't include
-
-Folder setup. Each project manages its own `project/0-inbox/`, `project/1-todo/`, `project/2-doing/`, `project/3-done/` directories.
+Quarry is a Claude Code plugin that injects a structured task management workflow — capture rough ideas, refine and score them, then execute one rock at a time until the backlog is clear.
 
 ## Installation
 
-Install via `claude-marketplace` or manually:
+Add the jehoshua02 marketplace and install the plugin using the `/plugin` command in Claude Code:
 
-```bash
-cp rules/quarry.md ~/.claude/rules/quarry.md
+```
+/plugin add-marketplace jehoshua02
+/plugin install quarry
 ```
 
-Or register the plugin so the `SessionStart` hook runs automatically.
+## What it does
+
+Injects project management workflow rules into Claude's context via `SessionStart` hook:
+
+- **Capture** — drop rough ideas into `project/0-inbox/` before they vanish
+- **Refine** — Q&A loop to score each task on Value, Momentum, Effort, and Risk
+- **Prioritize** — formula-based scoring, lower is higher priority
+- **Execute** — structured pipeline: inbox → todo → doing → done
